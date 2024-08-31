@@ -1,12 +1,32 @@
-h1 {
-    text-decoration: underline;
-  }
-  body {
-    color: darkseagreen;
-    background-color: black;
-  }
-  label {
-    background-color: khaki;
-    color: black;
-  }
-  
+.main{
+    width: 317.86px;
+    height: 194.94px;
+    top: 13px;
+    left: 56px;
+    gap: 0px;
+    opacity: 0px;
+   margin: 0 auto;
+}
+
+.botonLogin{
+  width: 238.12px;
+  height: 32.94px;
+  top: 129px;
+  left: 79px;
+  gap: 0px;
+  border-radius: 20px 0px 0px 0px;
+  opacity: 0px;
+  margin: 0 auto;
+
+}
+.botonRegistro{
+  width: 238.12px;
+  height: 32.94px;
+  top: 129px;
+  left: 79px;
+  gap: 0px;
+  border-radius: 20px 0px 0px 0px;
+  opacity: 0px;
+  margin: 0 auto;
+
+}

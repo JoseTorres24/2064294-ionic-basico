@@ -1,9 +1,14 @@
-var textoBarra = document.getElementById('barra');
+var Usuario = document.getElementById("Usuario");
+var Contraseña = document.getElementById("Contraseña");
+var parrafo = document.querySelector("p");
 
-function Imprimirtexto (){
-    var texto = textoBarra.value;
-    console.log(texto);
+function iniciarSesion(){
+
+    var Usuariovalor = Usuario.value;
+    //parrafo.innerHTML = "Login Correcto para " + Usuariovalor;
+    parrafo.innerHTML = `Inicio de sesion con exito para ${Usuariovalor}`;
 }
-function borrarTexto(){
-    textoBarra.value = '';
+function Registro(){
+    var Usuariovalor = Usuario.value;
+    parrafo.innerHTML = `Registro con exito para ${Usuariovalor}`;
 }

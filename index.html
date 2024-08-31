@@ -8,12 +8,31 @@
         <title>Practica 1 Aplicaciones Moviles</title>
     </head>
     <body>
-        <div>
-            <label for="">
-            Ingresele un textini: </label>  <input type="text" name="stringi" id="barra">
-            <div><button class="Impresion" onclick="Imprimirtexto ()">Imprimir Consolin</button></div>
-            <button class="Limpiasion" onclick="borrarTexto()">Limpiar textini</button>
+        <div class="main">
+
+            <div class="Usuario">
+                <label for="">
+                    Usuario: <input type="text" name="" id="Usuario">
+                </label>
+            </div>
+
+            <div class="Contraseña" >
+                <label for="">
+                    Contraseña: <input type="text" name="" id="Contraseña">
+                </label>
+            </div> 
+
+            <div class="botonLogin" id="botonLogin" onclick=" iniciarSesion()">
+                <button>Login</button>
+            </div>
+
+            <div class="botonRegistro" id="botonRegistro" onclick="Registro()">
+                <button>Registrarme</button>
+            </div>
+             <p></p>
         </div>
+
+       
     </body>
 
 <script src="script.js"></script>
