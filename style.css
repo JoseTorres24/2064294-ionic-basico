@@ -1,32 +1,54 @@
-.main{
-    width: 317.86px;
-    height: 194.94px;
-    top: 13px;
-    left: 56px;
-    gap: 0px;
-    opacity: 0px;
-   margin: 0 auto;
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
 }
 
-.botonLogin{
-  width: 238.12px;
-  height: 32.94px;
-  top: 129px;
-  left: 79px;
-  gap: 0px;
-  border-radius: 20px 0px 0px 0px;
-  opacity: 0px;
+/* Contenedor principal */
+.main {
+  width: 300px;
   margin: 0 auto;
-
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-.botonRegistro{
-  width: 238.12px;
-  height: 32.94px;
-  top: 129px;
-  left: 79px;
-  gap: 0px;
-  border-radius: 20px 0px 0px 0px;
-  opacity: 0px;
-  margin: 0 auto;
 
+/* Estilos para los campos de entrada */
+.Usuario, .Contraseña {
+  margin-bottom: 15px;
+}
+
+.usuario-label, .contraseña-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Estilos para los botones */
+#botonLogin, #botonRegistro {
+  margin-top: 10px;
+}
+
+.botonLogin, .botonRegistro {
+  width: 100%;
+  padding: 10px;
+  background-color: #5c0256; /* Color púrpura oscuro */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.botonLogin:hover, .botonRegistro:hover {
+  background-color: #8a0057; /* Color púrpura un poco más claro */
 }
