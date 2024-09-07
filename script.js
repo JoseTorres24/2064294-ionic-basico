@@ -4,6 +4,7 @@
     var total = 0;
     var lista = document.getElementById("lista");
     var parrafoTotal = document.querySelector("p");
+    
 function imprimirCosastotal(){
     
     var articuloValue = articulo.value;
