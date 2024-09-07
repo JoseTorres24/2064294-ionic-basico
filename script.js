@@ -15,9 +15,9 @@ function imprimirCosastotal(){
     lista.appendChild(elemento);
 
     
-    parrafoTotal.innerHTML = `<strong>${total}</strong>`
+    parrafoTotal.innerHTML = `Total: <strong>${total}</strong>`
 
-    articuloValue = '';
-    montoValue='';
+    document.getElementById("Articulo").value ='';
+    document.getElementById("Monto").value =''
 }
 
