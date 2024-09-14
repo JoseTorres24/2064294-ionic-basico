@@ -1,0 +1,11 @@
+ion-col{
+    border: solid 1px black;
+    text-align: center;
+    background-color:cornflowerblue;
+    display:block
+    
+    
+}
+ion-row{
+    margin-top: 40px;    
+}
