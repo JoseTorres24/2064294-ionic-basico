@@ -2,10 +2,14 @@ ion-col{
     border: solid 1px black;
     text-align: center;
     background-color:cornflowerblue;
-    display:block
-    
-    
+    display:block;
+
 }
-ion-row{
-    margin-top: 40px;    
+
+b{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
 }
