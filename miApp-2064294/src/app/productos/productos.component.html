@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<body>
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" size-md="4" *ngFor="let producto of productos" (click)="mostrarDetalles(producto)">
+          <ion-card class="producto-card">
+            <ion-card-header class="producto-card-header">
+              <ion-card-title>{{ producto.title }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="producto-card-content">
+              <img [src]="producto.image" class="producto-imagen" loading="lazy" width="150" height="150" />
+              <p>{{ producto.description }}</p>
+              <p>Precio: {{ producto.price }}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-modal [isOpen]="productoSeleccionado !== null" (ionModalDidDismiss)="cerrarDetalles()">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>{{ productoSeleccionado?.title }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="cerrarDetalles()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="modal-content">
+        <ion-card *ngIf="productoSeleccionado" class="detalle-card">
+          <ion-card-header>
+            <ion-card-title>{{ productoSeleccionado.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img [src]="productoSeleccionado.image" loading="lazy" />
+            <p>{{ productoSeleccionado.description }}</p>
+            <p><strong>Precio:</strong> {{ productoSeleccionado.price }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ion-modal>
+  </ion-content>
+</body>
+
+
+
