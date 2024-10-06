@@ -1,5 +1,19 @@
-<ion-list>
-  <ion-item *ngFor="let alumno of alumnos">
-    {{alumno}}
+<p>Lista de Alumnos</p>
+<ion-item-sliding *ngFor="let alumno of alumnos">
+  <ion-item class="centrar">
+    {{ alumno }}
   </ion-item>
-</ion-list>
+  <ion-item-options side="start">
+    <ion-item-option color="success" (click)="agregarAFavoritos(alumno)">
+      Agregar a Favoritos
+    </ion-item-option>
+  </ion-item-options>
+  <ion-item-options side="end">
+    <ion-item-option color="danger" (click)="eliminarAlumno(alumno)">
+      Eliminar
+    </ion-item-option>
+  </ion-item-options>
+</ion-item-sliding>
+
+
+
