@@ -4,10 +4,8 @@ import { Observable } from 'rxjs';
 import { NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-import { IonCard, IonCardContent, IonCardHeader, IonItem, IonList, IonButton,IonContent, IonGrid,IonCol, IonRow,IonHeader, IonToolbar,IonModal,IonTitle,IonCardTitle,IonButtons} from '@ionic/angular/standalone';
+import { IonCard,IonCardContent, IonCardHeader, IonItem, IonList, IonButton,IonContent, IonGrid,IonCol, IonRow,IonHeader, IonToolbar,IonModal,IonTitle,IonCardTitle,IonButtons} from '@ionic/angular/standalone';
 import { ChangeDetectorRef } from '@angular/core';
-
-
 
 
 export interface Producto {  // Define la interfaz para el producto

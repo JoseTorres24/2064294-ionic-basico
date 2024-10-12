@@ -11,9 +11,15 @@ export class ConsultaService {
 
   constructor(private http: HttpClient) { }
 
-  // Especifica el tipo de retorno como Observable<Producto[]>
+  // Obtener todos los productos
   getProductos(): Observable<Producto[]> {
-    return this.http.get<Producto[]>(this.apiUrl); // Se especifica el tipo de datos aquí
+    return this.http.get<Producto[]>(this.apiUrl);
   }
+ // Recuerde profe yo estoy usando una interface para facilitarme todo el uso en manejar variables que sea similares con el url del api que nos dio 
+  getProductoDetalle(id: string): Observable<Producto> {
+    const url = `${this.apiUrl}/${id}`;  // Construir la URL con el ID del producto
+    return this.http.get<Producto>(url);
+  }
+  
 }
 

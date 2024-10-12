@@ -1,25 +1,24 @@
 import { Routes } from '@angular/router';
-import { ProductosComponent } from './productos/productos.component';
+
 
 export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
   },
-  
   {
     path: 'productos',
-    component: ProductosComponent,
-    loadComponent: ()=> import('./productos/productos.component').then((m)=> m.ProductosComponent),
-   
+    loadComponent: () => import('./productos/productos.component').then((m) => m.ProductosComponent),
   },
   {
-    path:'productos/:id',
-    loadComponent:() =>import('./producto-detalle/producto-detalle.component').then((m) =>m.ProductoDetalleComponent)
+    path: 'productoDetalle/:id',  // ME EQUIVOQUE AQUIII TENIA TODO MAL REALIZADO ESTA PARTE AHHHHHH
+    loadComponent: () => import('./producto-detalle/producto-detalle.component').then((m) => m.ProductoDetalleComponent),
   },
-  {
+  {// Por eso no me cargaba nadota:/
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full',
+    pathMatch: 'full', //<--- Esto era la parte mala tenia realmente mal manejado el estado inicio al momento de iniciar ionic serve  y que ese muestre el proyecto desde la pagina de home
   }
 ];
+
+

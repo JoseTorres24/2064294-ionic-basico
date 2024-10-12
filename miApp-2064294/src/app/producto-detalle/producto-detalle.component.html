@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Informacion de producto seleccionado</ion-title>
+      
+    </ion-toolbar>
+  </ion-header>
+<ion-content *ngIf="producto"> <!--Mas que nada me aseguro que el producto sea seleccionado por que claro que sera seleccionado pero si no es seleccionado desde el productos
+    component.html pues no sera mostrado-->
+    <ion-card>
+      <ion-card-title>{{ producto.title }}</ion-card-title>
+      <ion-card-content>
+        <img width="250px" height="150px" [src]="producto.image" alt="Imagen de {{ producto.title }}">
+        <p>{{ producto.description }}</p>
+        <h2>{{ producto.price | currency }}</h2>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  <!--Queria que se viera en la direccion productoDetalle/id pero no se como hacerle pero vere si esta bien-->

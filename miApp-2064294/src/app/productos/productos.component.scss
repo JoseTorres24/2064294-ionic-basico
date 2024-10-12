@@ -1,170 +1,45 @@
-/* Estilo general para el body */
-body {
-    height: 100vh; /* Utiliza toda la altura de la ventana */
-    overflow-y: auto; /* Permite el desplazamiento vertical */
-    padding: 20px; /* Espacio alrededor del contenido */
-    background-color: #fafafa; /* Fondo claro para una apariencia más suave */
-}
-
-/* Estilo para cada tarjeta de producto */
+/* Estilo para las tarjetas feas de productos */
 .producto-card {
-    margin: 15px; /* Espaciado entre tarjetas */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para darle animación */
-}
-
-/* Añadir un efecto hover para dar una sensación interactiva */
-.producto-card:hover {
-    transform: scale(1.05); /* Aumenta el tamaño de la tarjeta ligeramente al pasar el cursor */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para dar énfasis */
-}
-
-/* Estilo para el ion-card-header */
-.producto-card-header {
-    background-color: #f8f8f8; /* Color de fondo */
-    font-weight: bold; /* Texto en negrita */
-    padding: 10px; /* Espaciado interior */
-    border-top-left-radius: 10px; /* Bordes redondeados superiores */
-    border-top-right-radius: 10px; /* Bordes redondeados superiores */
-    text-align: center; /* Centrar el título */
-}
-
-/* Estilo para el ion-card-content */
-.producto-card-content {
-    padding: 15px; /* Espaciado interior */
-    font-size: 14px; /* Tamaño de fuente */
-    line-height: 1.5; /* Espaciado entre líneas */
-    color: #333; /* Color del texto */
-}
-
-/* Estilo para la imagen del producto */
-.producto-imagen {
-    width: 100%; /* Ajusta el ancho al contenedor */
-    max-width: 150px; /* Ancho máximo de la imagen */
-    height: auto; /* Mantiene la relación de aspecto */
-    display: block; /* Asegúrate de que la imagen sea un bloque */
-    margin: 10px auto; /* Centra la imagen */
-    border-radius: 8px; /* Bordes redondeados para la imagen */
-    transition: transform 0.3s ease; /* Transición para la animación de zoom */
-}
-
-/* Añadir un efecto hover a la imagen */
-.producto-imagen:hover {
-    transform: scale(1.1); /* Efecto zoom al pasar el cursor */
-}
-
-/* Estilo específico para el modal */
-ion-modal {
-    --height: 70%; /* Altura del modal */
-    --width: 80%; /* Ancho del modal */
-    --border-radius: 15px; /* Bordes redondeados */
-    --background: #ffffff; /* Fondo blanco */
-    
-
-    ion-header {
-        --background: #4a90e2; /* Fondo del encabezado */
-        color: white; /* Texto en blanco */
-        padding: 16px; /* Espaciado */
-        text-align: center; /* Centrar el título */
-    }
-
-    ion-content {
-        --padding-start: 16px;
-        --padding-end: 16px;
-        --padding-top: 20px;
-        --padding-bottom: 20px;
-
-        ion-card {
-            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para el card */
-            --border-radius: 15px; /* Bordes redondeados */
-
-            ion-card-header {
-                ion-card-title {
-                    font-size: 1.4rem;
-                    font-weight: bold;
-                    text-align: center;
-                }
-            }
-
-            ion-card-content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                img {
-                    width: 100%;
-                    max-width: 200px; /* Tamaño máximo de la imagen */
-                    height: auto;
-                    margin-bottom: 15px; /* Espacio debajo de la imagen */
-                    border-radius: 10px;
-                }
-
-                p {
-                    font-size: 1rem;
-                    color: #333;
-                    text-align: center;
-                }
-            }
-        }
-    }
-}
-
-
-/* Estilos para el modal */
-.modal-content {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 100%; /* Asegúrate de que el contenido ocupe toda la altura del modal */
-    overflow-y: auto;
+    margin: 15px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
   }
   
-  /* Estilo para la tarjeta del detalle del producto */
-  .detalle-card {
-    max-width: 400px; /* Limita el ancho de la tarjeta */
-    width: 90%;
-    height: auto; /* Ajusta la altura automáticamente según el contenido */
-    margin: 0 auto; /* Centra la tarjeta */
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Sombra para destacar el contenido */
-    border-radius: 15px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta contenido que excede el borde */
+  
+  .producto-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
   }
   
-  /* Estilo para la imagen del producto */
-  .detalle-card img {
-    display: block;
-    margin: 10px auto; /* Centra la imagen */
-    border-radius: 10px; /* Bordes redondeados para hacer la imagen acorde con la tarjeta */
-    max-width: 50%; /* Cambiado a 80% para hacer la imagen más pequeña */
-    height: auto; /* Mantiene la proporción de la imagen */
+  
+  .producto-card-header {
+    background-color: #f8f8f8; 
+    font-weight: bold;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    text-align: center; 
   }
   
-  /* Estilo adicional para el ion-card-content */
-  .detalle-card ion-card-content {
-    padding: 20px;
-    text-align: center; /* Centra el texto */
-  }
-  
-  /* Mejora la apariencia del botón de cerrar */
-  ion-button {
-    --background: #d9534f; /* Rojo suave */
-    --background-hover: #c9302c; /* Rojo más oscuro al pasar el mouse */
-    color: #fff; /* Texto blanco */
-    margin: 5px;
-    border-radius: 8px;
-  }
-  
-  /* Estilo específico para el modal para asegurar el tamaño */
-  ion-modal {
-    --width: 500px; /* Ancho del modal ligeramente mayor que el ion-card */
-    --height: 600px; /* Altura del modal ligeramente mayor que el ion-card */
-    --border-radius: 20px; /* Bordes redondeados similares al card */
-    
-  }
 
-  /* Asegura que el ion-content del modal tenga desplazamiento */
+  .producto-card-content {
+    padding: 15px; 
+    text-align: center; 
+  }
   
+  /* Estilo para las imágenes que unas estan mas grandes que otras */
+  .producto-imagen {
+    width: 100%; /* Ocupa todo el anchote ,pero dentro  del contenedor */
+    max-width: 200px; 
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; /* Transición para el zoom */
+  }
   
-  
+  /* Efecto hover para las imágenes "Me gusta el efecto que se le dan a las imagenes" */
+  .producto-imagen:hover {
+    transform: scale(1.1); /* Efecto de zoom al hacer hover */
+  }
   
