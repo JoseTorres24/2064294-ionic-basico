@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ConsultaService } from '../consulta.service';
 import { Observable } from 'rxjs';
 import { NgFor, NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
 import { IonCard, IonCardContent, IonCardHeader, IonItem, IonList, IonButton,IonContent, IonGrid,IonCol, IonRow,IonHeader, IonToolbar,IonModal,IonTitle,IonCardTitle,IonButtons} from '@ionic/angular/standalone';
 import { ChangeDetectorRef } from '@angular/core';
 
@@ -13,6 +15,7 @@ export interface Producto {  // Define la interfaz para el producto
   description: string;
   price: string;
   image: string;
+  id:string;
 }
 
 @Component({
@@ -20,12 +23,11 @@ export interface Producto {  // Define la interfaz para el producto
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.scss'],
   standalone: true,
-  imports: [NgFor, IonCard, IonList, IonCardContent, IonItem, IonCardHeader, IonButton,NgIf,IonGrid,IonContent,IonCol,IonRow,IonToolbar,IonHeader,IonModal,IonTitle,IonCardTitle,IonButtons]
+  imports: [NgFor, IonCard, IonList, IonCardContent, IonItem, IonCardHeader, IonButton,NgIf,IonGrid,IonContent,IonCol,IonRow,IonToolbar,IonHeader,IonModal,IonTitle,IonCardTitle,IonButtons,RouterLink]
 })
 export class ProductosComponent implements OnInit {
   
   constructor(private consulta: ConsultaService, private cdr: ChangeDetectorRef) {}
- 
   ngOnInit() {
     this.consulta.getProductos().subscribe((res: Producto[]) => {
       this.productos = res;  // Asegúrate de que res sea de tipo Producto[]

@@ -3,7 +3,6 @@ import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/stan
 import { ListaAlumnosComponent } from '../lista-alumnos/lista-alumnos.component';
 import { ProductosComponent } from '../productos/productos.component';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',

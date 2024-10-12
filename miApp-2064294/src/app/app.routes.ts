@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ProductosComponent } from './productos/productos.component';
 
 export const routes: Routes = [
   {
@@ -7,7 +8,18 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
+  {
+    path: 'productos',
+    component: ProductosComponent,
+    loadComponent: ()=> import('./productos/productos.component').then((m)=> m.ProductosComponent),
+    pathMatch: 'full' 
+  },
+  {
+    path:'productos/:id',
+    loadComponent:() =>import('./producto-detalle/producto-detalle.component').then((m) =>m.ProductoDetalleComponent)
+  },
+  
 ];
