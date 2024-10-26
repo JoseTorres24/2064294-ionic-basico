@@ -18,9 +18,13 @@ export const routes: Routes = [
     path: 'listaAlumnos',// Para poder poner el formulario en la direccion dirigirlo desdde el homePage
     loadComponent: () => import('./lista-alumnos/lista-alumnos.component').then((m) => m.ListaAlumnosComponent),
   },
+  {
+    path:'Camara',
+    loadComponent: () => import('./camara/camara.component').then((m) => m.CamaraComponent),
+  },
   {// Por eso no me cargaba nadota:/
     path: '',
-    redirectTo: 'home', 
+    redirectTo: 'Camara',//Redireccionar Directamente a camara 
     pathMatch: 'full', //<--- Esto era la parte mala tenia realmente mal manejado el estado inicio al momento de iniciar ionic serve  y que ese muestre el proyecto desde la pagina de home
   }
 ];
